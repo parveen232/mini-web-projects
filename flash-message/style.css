@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+}
+
+.unfilled {
+    height: 10px;
+    width: 300px;
+    background-color: rgb(228, 228, 228);
+    border-radius: 50px;
+    position: relative;
+}
+
+.fill {
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+    background-color: rgb(0, 166, 255);
+    transition: width 3s ease-in, height 3s ease-in, background-color 1s ease-in;
+}
+
+.changeShape {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 70px;
+    /* width: 70px; */
+    border-radius: 10px;
+    transition: width 0.5s ease-in, height 0.5s ease-in;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.disappear {
+    transform: translate(-50%, 800px);
+    transition: transform 0.7s ease-in;
+}
+
+.notransition {
+    transition: none !important;
+}
+
+.fa-check {
+    font-size: 50px;
+    color: #fff;
+    visibility: hidden;
+}
+
+.fa-exclamation {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: #fff;
+    visibility: hidden;
+}
